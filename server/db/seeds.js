@@ -1,7 +1,7 @@
 use bucket_list;
 db.dropDatabase();
 
-db.bucket_list.insertMany([
+db.goals.insertMany([
   {
     goal: "be cool"
   }
