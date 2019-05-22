@@ -15,6 +15,7 @@ FormView.prototype.handleSumbit = function (event) {
   console.log(event.target);
   const newGoal = this.createGoal(event.target)
   PubSub.publish('FormView:goal-submit', newGoal)
+  console.log('newgoal', newGoal);
   event.target.reset()
   console.log('FormView published FormView:goal-submit');
 };
@@ -24,6 +25,7 @@ FormView.prototype.createGoal = function (form) {
     goal: form.goal.value
   }
   console.log(newGoal);
+  return newGoal
 };
 
 
